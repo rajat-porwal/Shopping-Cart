@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 3rem;
+  text-decoration: none;
+  color: inherit;
+  color: rgb(0, 126, 217);
+  letter-spacing: 0.2em;
+}
