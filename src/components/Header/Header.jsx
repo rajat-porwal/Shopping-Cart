@@ -14,7 +14,7 @@ function Header(props) {
     <div className={styles.header}>
       <div className="header-left-section">
         <Link to="/homepage" className={styles.logo}>
-          PORW@L
+          R@JAT PORW@L
         </Link>
       </div>
       <div className={styles.headerRightSection}>

@@ -1,4 +1,4 @@
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +12,7 @@ header {
   letter-spacing: 0.2em;
 }
 
-cartLogo {
+.cartLogo {
   width: 2em;
 }
 

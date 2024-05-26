@@ -1,22 +1,21 @@
 .card {
-    max-width: 350px;
-    text-align: center;
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: 0px 6px 8px #bebebe;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .cardTitle {
-    font-weight: 700;
-  }
-  
-  .cardImage {
-    width: 200px;
-  }
-  
+  max-width: 350px;
+  text-align: center;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0px 6px 8px #bebebe;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.cardTitle {
+  font-weight: 700;
+}
+
+.cardImage {
+  width: 200px;
+}
