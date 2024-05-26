@@ -1,0 +1,29 @@
+
+.productTable {
+  border-collapse: collapse;
+  border: 2px solid rgb(200,200,200);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  width: 100%;
+  font-size: 1rem;
+  margin: 30px 0;
+}
+
+.productTable tfoot {
+  font-weight: 600;
+}
+
+.productTable td, th {
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.quantityInput {
+  text-align: center;
+  padding: 7px;
+  font-size: 1em;
+  min-width: 3em;
+  width: 30%;
+  text-align: center;
+}
