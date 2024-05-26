@@ -27,5 +27,24 @@ function HomePage() {
       setCart([...cart, targetProduct]);
     }
   }
+
+  return (
+    <div>
+      <h2>Welcome to our store!</h2>
+      <div className={styles.products}>
+        {products.map((product) => (
+          <Card
+            key={product.id}
+            title={product.title}
+            description={product.description}
+            image={product.image}
+            handleClickAdd={handleClickAdd}
+            data={product.id}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
  
+export default HomePage;
