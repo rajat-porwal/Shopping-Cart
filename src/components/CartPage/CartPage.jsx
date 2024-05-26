@@ -35,3 +35,81 @@ function CartPage() {
       [e.target.name]: e.target.value,
     }));
   }
+
+  function handleDelete(e) {
+    const currentDataValue = +e.target.dataset.value;
+    setCart(
+      cart.filter((product) => {
+        return product.id !== currentDataValue;
+      })
+    );
+  }
+  let totalPrice = cart.reduce((total, currentItem) => {
+    return (
+      Math.round((total + currentItem.price * currentItem.quantity) * 100) / 100
+    );
+  }, 0);
+  return (
+    <div>
+      <h2>Your added products:</h2>
+      <ProductTable
+        cart={cart}
+        handleDelete={handleDelete}
+        inputHandler={handleChange}
+        handleSubmit={handleSubmit}
+        totalPrice={totalPrice}
+        inputs={inputs}
+      />
+    </div>
+  );
+}
+
+function ProductTable(props) {
+  return (
+    <form onSubmit={props.handleSubmit} action="/">
+      <table className={styles.productTable}>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {props.cart.map((product) => (
+            <tr key={product.id}>
+              <td>{product.title}</td>
+              <td>
+                <input
+                  className={styles.quantityInput}
+                  type="number"
+                  name={product.id}
+                  value={props.inputs[product.id] || ""}
+                  onChange={props.inputHandler}
+                />
+              </td>
+              <td>{product.price.toFixed(2)}</td>
+              <td>
+                <button
+                  type="button"
+                  data-value={product.id}
+                  onClick={props.handleDelete}
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colSpan={2}>TOTAL</td>
+            <td colSpan={2}>{props.totalPrice.toFixed(2)}</td>
+          </tr>
+        </tfoot>
+      </table>
+      <button type="submit" hidden></button>
+    </form>
+  );
+}
