@@ -11,3 +11,23 @@ header {
   color: rgb(0, 126, 217);
   letter-spacing: 0.2em;
 }
+
+cartLogo {
+  width: 2em;
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.countItems {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.buttonHeader {
+  font-size: 1.2em;
+}
