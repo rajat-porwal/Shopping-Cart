@@ -113,3 +113,13 @@ function ProductTable(props) {
     </form>
   );
 }
+
+ProductTable.propTypes = {
+  cart: PropTypes.array,
+  handleDelete: PropTypes.func,
+  inputHandler: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  totalPrice: PropTypes.number,
+};
+
+export default CartPage;
