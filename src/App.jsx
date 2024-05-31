@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer";
 
 import fetchProducts from "./components/FetchProducts/fetchProducts";
 import { useEffect } from "react";
@@ -29,6 +30,7 @@ function App() {
       <Header cartItems={itemsInCart} changeCart={setCart} />
       <div>
         <Outlet context={[products, setCart, cart]} />
+        <Footer />
       </div>
     </div>
   );
